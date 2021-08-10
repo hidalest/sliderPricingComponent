@@ -1,0 +1,16 @@
+$phone-mini: 320px;
+$phone: 766px;
+$table: 900px;
+$table-land: 1200px;
+$desktop: 1800px;
+
+@mixin responsiveMax($breakpoint) {
+  @media (max-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}
+@mixin responsiveMin($breakpoint) {
+  @media (min-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}

@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  //   background: $mainBackground;
+  background-color: $mainBackground;
+  background-image: url("../../images/bg-pattern.svg"); /* fallback */
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  height: 100vh;
+}
+
+.main {
+  width: 50%;
+  @include responsiveMax($phone) {
+    width: 85%;
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // padding: 2rem;
+  transform: translate(-50%, -50%);
+
+  .header {
+    width: 100%;
+    padding: 7rem 0;
+    background-image: url("../../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13rem;
+    text-align: center;
+    &--title {
+      font-size: 2.5rem;
+      @include responsiveMax($phone) {
+        font-size: 1.8rem;
+      }
+      z-index: 1;
+      margin-bottom: 0.8rem;
+    }
+    &--p {
+      font-size: 1.5rem;
+      color: $pricingText;
+      font-weight: 600;
+      @include responsiveMax($phone) {
+        font-size: 1rem;
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .pricing {
+    width: 80%;
+    @include responsiveMax($table) {
+      width: 100%;
+    }
+
+    @include responsiveMax($phone) {
+      width: 100%;
+    }
+
+    // @include responsiveMax($phone-mini) {
+    //   width: 100%;
+    // }
+
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgba($color: #000000, $alpha: 0.1);
+    & .slider {
+      padding: 4rem;
+      @include responsiveMax($phone) {
+        padding: 2rem;
+      }
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      &--cost {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        @include responsiveMax($phone) {
+          font-size: 1.1rem;
+        }
+
+        &-p {
+          color: $pricingText;
+        }
+
+        &-p1 {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        &-span {
+          font-weight: 800;
+          color: $pricingTextDarker;
+          font-size: 2.5rem;
+          @include responsiveMax($phone) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .slider--container {
+      margin-bottom: 6rem;
+      @include responsiveMax($phone-mini) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .slider--billing {
+      width: 70%;
+      @include responsiveMax($table-land) {
+        width: 90%;
+      }
+      @include responsiveMax($phone) {
+        width: 100%;
+      }
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & p {
+        font-size: 1.3rem;
+        color: $pricingText;
+        font-weight: 600;
+        position: relative;
+        @include responsiveMax($phone-mini) {
+          font-size: 1rem;
+        }
+      }
+      & .slider--billing-yearly {
+        display: flex;
+        flex-direction: column;
+        & .slider--billing-discount {
+          width: 100%;
+          border-radius: 1000px;
+          text-align: center;
+          font-size: 1rem;
+          background-color: $discountBg;
+          color: $discountText;
+        }
+      }
+    }
+
+    // Features
+    .features {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      color: $pricingText;
+      font-weight: 600;
+      margin: 4rem 0;
+      border-top: 2px solid rgba($color: $pricingText, $alpha: 0.1);
+      width: 100%;
+      @include responsiveMax($phone) {
+        margin-top: 2rem;
+        flex-direction: column;
+      }
+
+      &--list {
+        margin: 2rem 0;
+        list-style-image: url("../../images/icon-check.svg");
+        @include responsiveMax($phone) {
+          margin-bottom: 0;
+        }
+        &-item {
+          margin: 1rem 0;
+          font-size: 1.2rem;
+          @include responsiveMax($phone) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &--button {
+        background-color: $pricingTextDarker;
+        color: $mainBackground;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        padding: 1rem 3.5rem;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        transition: all 0.25s;
+
+        &:hover {
+          transform: translateY(-0.5rem);
+          transition: all 0.25s;
+          box-shadow: 0 0 50px rgba($color: #000000, $alpha: 0.2);
+          perspective: 10000000px;
+        }
+
+        &:active {
+          transform: translateY(0rem);
+          transition: all 0.25s;
+          box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}

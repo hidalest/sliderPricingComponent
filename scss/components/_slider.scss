@@ -1,0 +1,168 @@
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+// Actual Stylesss
+
+// -> Button
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  @include responsiveMax($phone) {
+    height: 25px;
+    width: 25px;
+  }
+  border-radius: 10000px;
+  border: none;
+  background: $sliderColor2;
+  cursor: pointer;
+  margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  // box-shadow: 0px 0px 1px rgba($color: #000000, $alpha: 0.1); /* Add cool effects to your sliders! */
+  box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.2); /* Add cool effects to your sliders! */
+  transition: all 0.25s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  @include responsiveMax($phone) {
+    height: 25px;
+    width: 25px;
+  }
+  border: none;
+  border-radius: 10000px;
+  background: $sliderColor2;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.2); /* Add cool effects to your sliders! */
+  transition: all 0.25s;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  @include responsiveMax($phone) {
+    height: 25px;
+    width: 25px;
+  }
+  border: none;
+  border-radius: 10000px;
+  background: $sliderColor2;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.2); /* Add cool effects to your sliders! */
+  transition: all 0.25s;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: $sliderColor1;
+  border-radius: 10000px;
+  transition: all 0.25s;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background: $sliderColor1;
+  border-radius: 10000px;
+  transition: all 0.25s;
+}
+input[type="range"]:active::-ms-thumb {
+  background: $sliderColor1;
+  border-radius: 10000px;
+  transition: all 0.25s;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 10000px;
+  background: $sliderColor2;
+  cursor: pointer;
+  //   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 0px 0px 1px rgba($color: #000000, $alpha: 0.1); /* Add cool effects to your sliders! */
+}
+
+// TRACK
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  @include responsiveMax($phone) {
+    height: 5px;
+  }
+  cursor: pointer;
+  background: $sliderColor1;
+  border-radius: 10000px;
+  transition: all 0.25s;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.1); /* Add cool effects to your sliders! */
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  @include responsiveMax($phone) {
+    height: 5px;
+  }
+  cursor: pointer;
+  background: $sliderColor1;
+  border-radius: 10000px;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.1); /* Add cool effects to your sliders! */
+  transition: all 0.25s;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  @include responsiveMax($phone) {
+    height: 5px;
+  }
+  cursor: pointer;
+  background: $sliderColor1;
+  border-radius: 10000px;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.1); /* Add cool effects to your sliders! */
+  transition: all 0.25s;
+}
+input[type="range"]:active::-webkit-slider-runnable-track {
+  background: $sliderColor2;
+}
+input[type="range"]:active::-moz-range-track {
+  background: $sliderColor2;
+  transition: all 0.25s;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: $sliderColor1;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: $sliderColor1;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}

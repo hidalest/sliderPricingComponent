@@ -1,0 +1,85 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  @include responsiveMax($phone) {
+    width: 60px;
+    height: 25px;
+  }
+  @include responsiveMax($phone-mini) {
+    width: 45px;
+    height: 23px;
+  }
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider--toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.3);
+}
+
+.slider--toggle:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  @include responsiveMax($phone) {
+    height: 17.5px;
+    width: 17.5px;
+  }
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider--toggle {
+  background-color: $sliderColor2;
+}
+
+input:active + .slider--toggle {
+  box-shadow: 0 0 1px $sliderColor2;
+}
+
+input:checked + .slider--toggle:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  @include responsiveMax($phone) {
+    -webkit-transform: translateX(35px);
+    -ms-transform: translateX(35px);
+    transform: translateX(35px);
+  }
+  @include responsiveMax($phone-mini) {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+/* Rounded sliders */
+.slider--toggle.round {
+  border-radius: 34px;
+}
+
+.slider--toggle.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,624 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 10000px;
+  border: none;
+  background: #10d5c2;
+  cursor: pointer;
+  margin-top: -10px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* Add cool effects to your sliders! */
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 10000px;
+  background: #10d5c2;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* Add cool effects to your sliders! */
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-moz-range-thumb {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 10000px;
+  background: #10d5c2;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* Add cool effects to your sliders! */
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-ms-thumb {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #a5f3eb;
+  border-radius: 10000px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background: #a5f3eb;
+  border-radius: 10000px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+input[type="range"]:active::-ms-thumb {
+  background: #a5f3eb;
+  border-radius: 10000px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 10000px;
+  background: #10d5c2;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+  /* Add cool effects to your sliders! */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: #a5f3eb;
+  border-radius: 10000px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add cool effects to your sliders! */
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: #a5f3eb;
+  border-radius: 10000px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add cool effects to your sliders! */
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+  }
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: #a5f3eb;
+  border-radius: 10000px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add cool effects to your sliders! */
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (max-width: 47.875em) {
+  input[type="range"]::-ms-track {
+    height: 5px;
+  }
+}
+
+input[type="range"]:active::-webkit-slider-runnable-track {
+  background: #10d5c2;
+}
+
+input[type="range"]:active::-moz-range-track {
+  background: #10d5c2;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #a5f3eb;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #a5f3eb;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+@media (max-width: 47.875em) {
+  .switch {
+    width: 60px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 20em) {
+  .switch {
+    width: 45px;
+    height: 23px;
+  }
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider--toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.slider--toggle:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 47.875em) {
+  .slider--toggle:before {
+    height: 17.5px;
+    width: 17.5px;
+  }
+}
+
+input:checked + .slider--toggle {
+  background-color: #10d5c2;
+}
+
+input:active + .slider--toggle {
+  -webkit-box-shadow: 0 0 1px #10d5c2;
+          box-shadow: 0 0 1px #10d5c2;
+}
+
+input:checked + .slider--toggle:before {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+@media (max-width: 47.875em) {
+  input:checked + .slider--toggle:before {
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
+  }
+}
+
+@media (max-width: 20em) {
+  input:checked + .slider--toggle:before {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+/* Rounded sliders */
+.slider--toggle.round {
+  border-radius: 34px;
+}
+
+.slider--toggle.round:before {
+  border-radius: 50%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #fafbff;
+  background-image: url("../../images/bg-pattern.svg");
+  /* fallback */
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  height: 100vh;
+}
+
+.main {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 47.875em) {
+  .main {
+    width: 85%;
+  }
+}
+
+.main .header {
+  width: 100%;
+  padding: 7rem 0;
+  background-image: url("../../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13rem;
+  text-align: center;
+}
+
+.main .header--title {
+  font-size: 2.5rem;
+  z-index: 1;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 47.875em) {
+  .main .header--title {
+    font-size: 1.8rem;
+  }
+}
+
+.main .header--p {
+  font-size: 1.5rem;
+  color: #858fad;
+  font-weight: 600;
+}
+
+@media (max-width: 47.875em) {
+  .main .header--p {
+    font-size: 1rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.main .pricing {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 56.25em) {
+  .main .pricing {
+    width: 100%;
+  }
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing {
+    width: 100%;
+  }
+}
+
+.main .pricing .slider {
+  padding: 4rem;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .slider {
+    padding: 2rem;
+  }
+}
+
+.main .pricing .slider--cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .slider--cost {
+    font-size: 1.1rem;
+  }
+}
+
+.main .pricing .slider--cost-p {
+  color: #858fad;
+}
+
+.main .pricing .slider--cost-p1 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main .pricing .slider--cost-span {
+  font-weight: 800;
+  color: #293356;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .slider--cost-span {
+    font-size: 2rem;
+  }
+}
+
+.main .pricing .slider--container {
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 20em) {
+  .main .pricing .slider--container {
+    margin-bottom: 2rem;
+  }
+}
+
+.main .pricing .slider--billing {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 75em) {
+  .main .pricing .slider--billing {
+    width: 90%;
+  }
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .slider--billing {
+    width: 100%;
+  }
+}
+
+.main .pricing .slider--billing p {
+  font-size: 1.3rem;
+  color: #858fad;
+  font-weight: 600;
+  position: relative;
+}
+
+@media (max-width: 20em) {
+  .main .pricing .slider--billing p {
+    font-size: 1rem;
+  }
+}
+
+.main .pricing .slider--billing .slider--billing-yearly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .pricing .slider--billing .slider--billing-yearly .slider--billing-discount {
+  width: 100%;
+  border-radius: 1000px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #feece7;
+  color: #ff8c66;
+}
+
+.main .pricing .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #858fad;
+  font-weight: 600;
+  margin: 4rem 0;
+  border-top: 2px solid rgba(133, 143, 173, 0.1);
+  width: 100%;
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .features {
+    margin-top: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .pricing .features--list {
+  margin: 2rem 0;
+  list-style-image: url("../../images/icon-check.svg");
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .features--list {
+    margin-bottom: 0;
+  }
+}
+
+.main .pricing .features--list-item {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 47.875em) {
+  .main .pricing .features--list-item {
+    font-size: 1rem;
+  }
+}
+
+.main .pricing .features--button {
+  background-color: #293356;
+  color: #fafbff;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 3.5rem;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.main .pricing .features--button:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  -webkit-perspective: 10000000px;
+          perspective: 10000000px;
+}
+
+.main .pricing .features--button:active {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=main.css.map */

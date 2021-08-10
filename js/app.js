@@ -8,6 +8,7 @@ const btnCheckContainer = document.querySelector(".switch");
 const btnCheck = document.querySelector("#slider--checkbox");
 const typeBilling = document.querySelector(".slider--billing-type");
 
+//Slider steps so the slider can jump fom the desire cost per month/year
 const sliderSteps = () => {
   val = slider.value;
   if (val < 8) {
@@ -26,6 +27,7 @@ const sliderSteps = () => {
   }
 };
 
+// Channge the values of the cost and the views that will generate.
 const amountOfViews = () => {
   if (slider.value === "8") {
     views.innerHTML = "10K pageviews";
@@ -45,6 +47,7 @@ const amountOfViews = () => {
   } else views.innerHTML = "0 pageviews";
 };
 
+// Make the conversion from montly to yearly
 const billing = function () {
   if (btnCheck.checked) {
     const yearlyBill = val * 12;

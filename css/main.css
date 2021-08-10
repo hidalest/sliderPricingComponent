@@ -324,7 +324,7 @@ html {
 body {
   font-family: "Manrope", sans-serif;
   background-color: #fafbff;
-  background-image: url("../../images/bg-pattern.svg");
+  background-image: url("../images/bg-pattern.svg");
   /* fallback */
   background-repeat: no-repeat;
   background-size: 100% 50%;

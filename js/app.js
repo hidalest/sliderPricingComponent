@@ -60,7 +60,7 @@ sliderSteps();
 billing();
 amountOfViews();
 
-slider.addEventListener("click", (e) => {
+slider.addEventListener("input", (e) => {
   sliderSteps();
   billing();
   amountOfViews();
@@ -70,6 +70,5 @@ btnCheckContainer.addEventListener("click", (e) => {
   sliderSteps();
   billing();
   amountOfViews();
-  console.log(typeBilling.innerHTML);
   //   typeBilling.innerHTML = "month" ? "month" : "year";
 });

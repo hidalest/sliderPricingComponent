@@ -27,7 +27,7 @@ body {
   .header {
     width: 100%;
     padding: 7rem 0;
-    background-image: url("../../images/pattern-circles.svg");
+    background-image: url("../images/pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 13rem;
@@ -171,7 +171,7 @@ body {
 
       &--list {
         margin: 2rem 0;
-        list-style-image: url("../../images/icon-check.svg");
+        list-style-image: url("../images/icon-check.svg");
         @include responsiveMax($phone) {
           margin-bottom: 0;
         }

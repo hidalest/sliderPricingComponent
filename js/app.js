@@ -12,9 +12,11 @@ const billing = function (price) {
   if (btnCheck.checked) {
     const yearly = price * 12;
     const discount = yearly * 0.25;
-    billingAmount.innerHTML = `$${yearly - discount}`;
+    billingAmount.innerHTML = `$${yearly - discount}.00`;
+    typeBilling.innerHTML = "year";
   } else {
-    billingAmount.innerHTML = `$${price}`;
+    billingAmount.innerHTML = `$${price}.00`;
+    typeBilling.innerHTML = "month";
   }
 };
 // Channge the values of the cost and the views that will generate.

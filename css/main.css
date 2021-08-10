@@ -356,6 +356,18 @@ body {
   text-align: center;
 }
 
+@media (max-width: 75em) {
+  .main .header {
+    margin-top: 20rem;
+  }
+}
+
+@media (max-width: 47.875em) {
+  .main .header {
+    margin-top: 0;
+  }
+}
+
 .main .header--title {
   font-size: 2.5rem;
   z-index: 1;

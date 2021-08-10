@@ -32,6 +32,13 @@ body {
     background-position: center;
     background-size: 13rem;
     text-align: center;
+    @include responsiveMax($table-land) {
+      margin-top: 20rem;
+    }
+
+    @include responsiveMax($phone) {
+      margin-top: 0;
+    }
     &--title {
       font-size: 2.5rem;
       @include responsiveMax($phone) {

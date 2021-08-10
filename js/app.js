@@ -8,69 +8,46 @@ const btnCheckContainer = document.querySelector(".switch");
 const btnCheck = document.querySelector("#slider--checkbox");
 const typeBilling = document.querySelector(".slider--billing-type");
 
-//Slider steps so the slider can jump fom the desire cost per month/year
-const sliderSteps = () => {
-  val = slider.value;
-  if (val < 8) {
-    slider.step = 8;
-    slider.value = 8;
-    val = 8;
-  } else if (val >= 8 && val < 16) slider.step = 4;
-  else if (val >= 16 && val <= 24) slider.step = 8;
-  else if (val > 25) {
-    slider.step = 12;
-    slider.value = 36;
-    val = 36;
+const billing = function (price) {
+  if (btnCheck.checked) {
+    const yearly = price * 12;
+    const discount = yearly * 0.25;
+    billingAmount.innerHTML = `$${yearly - discount}`;
   } else {
-    val = 16;
-    slider.value = 16;
+    billingAmount.innerHTML = `$${price}`;
   }
 };
-
 // Channge the values of the cost and the views that will generate.
 const amountOfViews = () => {
-  if (slider.value === "8") {
+  if (slider.value >= 0 && slider.value <= 20) {
     views.innerHTML = "10K pageviews";
-    billingAmount.innerHTML = `$${val}.00`;
-  } else if (slider.value === "12") {
+    billing(8);
+  } else if (slider.value >= 21 && slider.value <= 40) {
     views.innerHTML = "50K pageviews";
-    billingAmount.innerHTML = `$${val}.00`;
-  } else if (slider.value === "16") {
+    billing(12);
+  } else if (slider.value >= 41 && slider.value <= 60) {
     views.innerHTML = "100K pageviews";
-    billingAmount.innerHTML = `$${val}.00`;
-  } else if (slider.value === "24") {
+    billing(16);
+  } else if (slider.value >= 61 && slider.value <= 80) {
     views.innerHTML = "500K pageviews";
-    billingAmount.innerHTML = `$${val}.00`;
-  } else if (slider.value === "36") {
+    billing(24);
+  } else if (slider.value >= 81) {
     views.innerHTML = "1M pageviews";
-    billingAmount.innerHTML = `$${val}.00`;
+    billing(36);
   } else views.innerHTML = "0 pageviews";
 };
 
 // Make the conversion from montly to yearly
-const billing = function () {
-  if (btnCheck.checked) {
-    const yearlyBill = val * 12;
-    const discount = yearlyBill * 0.25;
-    val = yearlyBill - discount;
-    typeBilling.innerHTML = "year";
-  } else {
-    typeBilling.innerHTML = "month";
-  }
-};
 
-sliderSteps();
 billing();
 amountOfViews();
 
 slider.addEventListener("input", (e) => {
-  sliderSteps();
   billing();
   amountOfViews();
 });
 
 btnCheckContainer.addEventListener("click", (e) => {
-  sliderSteps();
   billing();
   amountOfViews();
   //   typeBilling.innerHTML = "month" ? "month" : "year";

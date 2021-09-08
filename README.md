@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot1.jpg)
-![](images/screenshot2.jpg)
+![images/screenshot1.png](images/screenshot1.png)
+![images/screenshot2.png](images/screenshot2.png)
 
 ### Links
 
@@ -55,7 +55,7 @@ To see how you can add code snippets, see below:
 ### Continued development
 
 This was an awesome opportunity to learn about the slider but it opened my eyes that there are a lot of components that I haven't used before. This project inspired me on continue working on these kind of projects to learn more.
-r screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+eenshot, feel free to remove this entire section.**
 
 ### Links
 

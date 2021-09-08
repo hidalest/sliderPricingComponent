@@ -42,9 +42,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Vainilla JS
 
 ### What I learned
 
@@ -55,7 +53,9 @@ To see how you can add code snippets, see below:
 ### Continued development
 
 This was an awesome opportunity to learn about the slider but it opened my eyes that there are a lot of components that I haven't used before. This project inspired me on continue working on these kind of projects to learn more.
-eenshot, feel free to remove this entire section.**
+ate the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 

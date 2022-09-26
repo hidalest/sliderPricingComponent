@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://ehidalgo506-dev.github.io/sliderPricingComponent/](https://ehidalgo506-dev.github.io/sliderPricingComponent/)
+- Live Site URL: [https://hidalest.github.io/sliderPricingComponent/](https://hidalest.github.io/sliderPricingComponent/)
 
 ## My process
 
